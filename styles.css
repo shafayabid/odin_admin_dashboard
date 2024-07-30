@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --white-filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(39deg) brightness(112%) contrast(112%);
+    --size-icon-small: 24px;
+    --size-icon-medium: 32px;
+    --size-icon-large: 50px;
+    --margin-vsmall: 8px;
+    --margin-small: 16px;
+    --margin-medium: 24px;
+    --margin-large: 32px;
+    --padding-vsmall: 8px;
+    --padding-small: 16px;
+    --padding-medium: 24px;
+    --padding-large: 32px;
+    --font-small: 1.25em;
+    --font-medium: 1.5em;
+    --font-large: 2em;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+
+.container-right {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+.nav-top {
+    background-color: white;
+}
+
+.projects {
+    background-color: #e2e8f0;
+}
+
+.container-left {
+    background-color: #1992d4;
+    padding: var(--padding-small);
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    /* font-size: var(--font-small); */
+}
+
+.container-left img {
+    filter: var(--white-filter);
+    height: var(--size-icon-small);
+    width: var(--size-icon-small);
+}
+
+/* select all divs within the div within container-left div (third nested div) */
+.container-left div > div {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    color: white;
+    align-items: center;
+}
+
+/* select all the divs within container-left div (second nested div) */
+.container-left > div {
+    /* margin-left: var(--margin-small); */
+}
+
+
+/* selects first div within the container-left div and then the image tag inside it */
+.container-left > div:nth-child(1)  img {
+    height: var(--size-icon-large);
+    width: var(--size-icon-large);
+    margin-right: var(--margin-vsmall);
+}
+
+/* selects first div within the container-left div */
+.container-left > div:nth-child(1) {
+    font-size: var(--font-medium);
+}
+
+/* selects second div within the container-left div */
+.container-left > div:nth-child(2) {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: var(--margin-vsmall);
+    margin-top: var(--margin-large);
+}
+
+/* selects third div within the container-left div */
+.container-left > div:nth-child(3) {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: var(--margin-vsmall);
+    margin-top: var(--margin-large);
+}
