@@ -47,7 +47,10 @@
 }
 
 .projects {
+    display: grid;
+    grid-template-rows: 0.1fr 0.9fr;
     background-color: #e2e8f0;
+    padding: var(--padding-medium);
 }
 
 .container-left {
@@ -196,3 +199,120 @@ input {
     border: none;
 }
 
+.project-bottom {
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    column-gap: var(--font-vsmall);
+    margin-top: var(--margin-small);
+}
+
+.project-top {
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    align-items: center;
+    font-weight: 800;
+    column-gap: var(--font-vsmall);
+}
+
+.project-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: var(--margin-large);
+    row-gap: var(--margin-large);
+}
+
+.project-box {
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 1fr;
+    background-color: white;
+    border-radius: 10px;
+    padding: var(--padding-small);
+}
+
+.project-icons {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.project-icon {
+    height: var(--size-icon-small);
+    width: var(--size-icon-small);
+}
+
+.project-icons > img:nth-child(1) {
+    grid-column-start: 8;
+    grid-column-end: 9;
+}
+
+.project-title {
+    font-weight: 800;
+}
+
+.project-desc {
+    color: #979797;
+}
+
+.assignment {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.announcement-box {
+    background-color: white;
+    padding: var(--padding-medium);
+    border-radius: 10px;
+}
+
+.announcement-box > div {
+    margin-top: var(--margin-small);
+}
+
+.announcement-box > div > div:nth-child(1) {
+    font-weight: 800;
+}
+
+.announcement-box > div > div:nth-child(2) {
+    color: #979797;
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: 0.1fr 0.9fr;
+    margin-top: var(--margin-small);
+}
+
+.trending > div:nth-child(1) {
+    font-weight: 800;
+}
+
+.trending-box {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: white;
+    border-radius: 10px;
+    padding: var(--padding-small);
+}
+
+.trending-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    align-items: center;
+}
+
+.trending-item img {
+    height: var(--size-icon-large);
+    width: var(--size-icon-large);
+}
+
+.trending-item > div{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trending-item > div > div:nth-child(1) {
+    font-weight: 800;
+}
+
+.trending-item > div > div:nth-child(2) {
+    color: #979797;
+}
